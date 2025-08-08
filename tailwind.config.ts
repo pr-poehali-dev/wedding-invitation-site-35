@@ -19,6 +19,12 @@ export default {
 		},
 		extend: {
 			colors: {
+				// Wedding theme colors
+				pearl: '#F8F6F3',
+				rose: '#E8D5D0',
+				champagne: '#D4C4B0',
+				cream: '#F5F2F0',
+				beige: '#C9B8A8',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -69,6 +75,18 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'pearl-shimmer': {
+					'0%, 100%': { opacity: '0.7' },
+					'50%': { opacity: '1' }
+				},
 				'accordion-down': {
 					from: {
 						height: '0'
@@ -88,7 +106,10 @@ export default {
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'float': 'float 3s ease-in-out infinite',
+				'pearl-shimmer': 'pearl-shimmer 2s ease-in-out infinite'
 			}
 		}
 	},
