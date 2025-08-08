@@ -56,31 +56,49 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-pearl to-cream font-open">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center text-center px-4">
-        <div className="absolute inset-0 opacity-10">
-          <div className="w-20 h-20 bg-rose/30 rounded-full absolute top-20 left-10 animate-float"></div>
-          <div className="w-12 h-12 bg-champagne/30 rounded-full absolute top-40 right-20 animate-pearl-shimmer"></div>
-          <div className="w-16 h-16 bg-rose/20 rounded-full absolute bottom-32 left-20 animate-float" style={{animationDelay: '1s'}}></div>
-          <div className="w-8 h-8 bg-champagne/40 rounded-full absolute bottom-20 right-16 animate-pearl-shimmer" style={{animationDelay: '2s'}}></div>
+      <section className="relative min-h-screen flex items-center justify-center text-center px-4" style={{backgroundImage: 'url(/img/2c1a9d42-c85c-4f1e-af45-53978ce1d70e.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay'}}>
+        {/* Pearl and Flower Decorations */}
+        <div className="absolute inset-0 opacity-20 overflow-hidden">
+          {/* Floating Pearls */}
+          <div className="w-6 h-6 bg-white/80 rounded-full absolute top-20 left-10 animate-float shadow-lg" style={{boxShadow: '0 0 20px rgba(255,255,255,0.8)'}}></div>
+          <div className="w-4 h-4 bg-white/70 rounded-full absolute top-40 right-20 animate-pearl-shimmer" style={{boxShadow: '0 0 15px rgba(255,255,255,0.6)'}}></div>
+          <div className="w-8 h-8 bg-white/90 rounded-full absolute bottom-32 left-20 animate-float" style={{animationDelay: '1s', boxShadow: '0 0 25px rgba(255,255,255,0.9)'}}></div>
+          <div className="w-3 h-3 bg-white/60 rounded-full absolute bottom-20 right-16 animate-pearl-shimmer" style={{animationDelay: '2s'}}></div>
+          
+          {/* Additional Pearls */}
+          <div className="w-5 h-5 bg-white/75 rounded-full absolute top-60 left-1/4 animate-float" style={{animationDelay: '0.5s', boxShadow: '0 0 18px rgba(255,255,255,0.7)'}}></div>
+          <div className="w-7 h-7 bg-white/85 rounded-full absolute top-80 right-1/3 animate-pearl-shimmer" style={{animationDelay: '1.5s', boxShadow: '0 0 22px rgba(255,255,255,0.8)'}}></div>
+          
+          {/* Flower Elements */}
+          <div className="absolute top-16 right-10 text-pink-300 text-2xl animate-flower-bloom" style={{animationDelay: '2s'}}>🌸</div>
+          <div className="absolute bottom-40 left-16 text-rose-300 text-xl animate-flower-bloom" style={{animationDelay: '3s'}}>🌹</div>
+          <div className="absolute top-1/3 left-8 text-purple-300 text-lg animate-flower-bloom" style={{animationDelay: '4s'}}>💐</div>
+          <div className="absolute bottom-16 right-8 text-pink-400 text-2xl animate-flower-bloom" style={{animationDelay: '2.5s'}}>🌺</div>
+          <div className="absolute top-2/3 right-1/4 text-yellow-300 text-lg animate-flower-bloom" style={{animationDelay: '3.5s'}}>🌼</div>
+          <div className="absolute bottom-1/3 left-1/3 text-red-300 text-xl animate-flower-bloom" style={{animationDelay: '4.5s'}}>🌷</div>
+          
+          {/* Pearl Strings */}
+          <div className="absolute top-0 left-1/4 w-px h-32 bg-gradient-to-b from-white/60 to-transparent animate-fade-in" style={{animationDelay: '3s'}}></div>
+          <div className="absolute top-0 right-1/3 w-px h-40 bg-gradient-to-b from-white/40 to-transparent animate-fade-in" style={{animationDelay: '3.5s'}}></div>
         </div>
         
         <div className="relative z-10 max-w-4xl mx-auto animate-fade-in">
           <div className="mb-8">
-            <div className="flex items-center justify-center mb-6">
+            <div className="flex items-center justify-center mb-6 animate-fade-in">
               <div className="w-16 h-0.5 bg-gradient-to-r from-transparent to-rose mr-4"></div>
               <Icon name="Heart" className="text-rose text-2xl animate-pearl-shimmer" />
               <div className="w-16 h-0.5 bg-gradient-to-l from-transparent to-rose ml-4"></div>
             </div>
             
             <h1 className="font-cormorant text-6xl md:text-8xl font-light text-foreground mb-4 tracking-wide">
-              Борис
-              <span className="block text-4xl md:text-5xl text-muted-foreground my-2">&</span>
-              Елизавета
+              <span className="inline-block animate-slide-in-left">Борис</span>
+              <span className="block text-4xl md:text-5xl text-muted-foreground my-2 animate-bounce-gentle" style={{animationDelay: '0.5s'}}>&</span>
+              <span className="inline-block animate-slide-in-right" style={{animationDelay: '0.3s'}}>Елизавета</span>
             </h1>
             
             <div className="flex items-center justify-center mb-8">
               <div className="w-24 h-0.5 bg-gradient-to-r from-transparent to-champagne mr-6"></div>
-              <p className="text-xl md:text-2xl text-muted-foreground font-light">
+              <p className="text-xl md:text-2xl text-muted-foreground font-light animate-fade-in" style={{animationDelay: '1s'}}>
                 20 сентября 2025
               </p>
               <div className="w-24 h-0.5 bg-gradient-to-l from-transparent to-champagne ml-6"></div>
@@ -88,23 +106,23 @@ const Index = () => {
           </div>
 
           {/* Countdown Timer */}
-          <Card className="bg-white/50 backdrop-blur-sm border-rose/20 shadow-lg">
+          <Card className="bg-white/50 backdrop-blur-sm border-rose/20 shadow-lg animate-fade-in" style={{animationDelay: '1.5s'}}>
             <CardContent className="p-6">
-              <p className="text-muted-foreground mb-4 font-cormorant text-lg">До нашего торжества осталось</p>
+              <p className="text-muted-foreground mb-4 font-cormorant text-lg animate-fade-in" style={{animationDelay: '2s'}}>До нашего торжества осталось</p>
               <div className="grid grid-cols-4 gap-4 text-center">
-                <div>
+                <div className="animate-bounce-gentle" style={{animationDelay: '2.2s'}}>
                   <div className="text-3xl md:text-4xl font-cormorant font-semibold text-foreground">{timeLeft.days}</div>
                   <div className="text-sm text-muted-foreground">дней</div>
                 </div>
-                <div>
+                <div className="animate-bounce-gentle" style={{animationDelay: '2.4s'}}>
                   <div className="text-3xl md:text-4xl font-cormorant font-semibold text-foreground">{timeLeft.hours}</div>
                   <div className="text-sm text-muted-foreground">часов</div>
                 </div>
-                <div>
+                <div className="animate-bounce-gentle" style={{animationDelay: '2.6s'}}>
                   <div className="text-3xl md:text-4xl font-cormorant font-semibold text-foreground">{timeLeft.minutes}</div>
                   <div className="text-sm text-muted-foreground">минут</div>
                 </div>
-                <div>
+                <div className="animate-bounce-gentle" style={{animationDelay: '2.8s'}}>
                   <div className="text-3xl md:text-4xl font-cormorant font-semibold text-foreground">{timeLeft.seconds}</div>
                   <div className="text-sm text-muted-foreground">секунд</div>
                 </div>
@@ -115,37 +133,44 @@ const Index = () => {
       </section>
 
       {/* Event Details */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto">
+      <section className="py-20 px-4 relative">
+        {/* Background Decoration */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="w-4 h-4 bg-rose/40 rounded-full absolute top-10 left-16 animate-pearl-shimmer"></div>
+          <div className="w-6 h-6 bg-white/60 rounded-full absolute top-32 right-20 animate-float"></div>
+          <div className="absolute top-20 left-1/4 text-pink-200 text-lg animate-flower-bloom" style={{animationDelay: '1s'}}>🌸</div>
+        </div>
+
+        <div className="max-w-4xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <h2 className="font-cormorant text-4xl md:text-5xl font-light text-foreground mb-4">
+            <h2 className="font-cormorant text-4xl md:text-5xl font-light text-foreground mb-4 animate-slide-in-left">
               Детали торжества
             </h2>
-            <div className="w-24 h-0.5 bg-rose mx-auto"></div>
+            <div className="w-24 h-0.5 bg-rose mx-auto animate-fade-in" style={{animationDelay: '0.3s'}}></div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-white/60 backdrop-blur-sm border-rose/20 shadow-lg animate-fade-in">
+            <Card className="bg-white/60 backdrop-blur-sm border-rose/20 shadow-lg animate-fade-in hover:scale-105 transition-transform">
               <CardContent className="p-6 text-center">
-                <Icon name="Clock" className="text-rose text-2xl mb-4 mx-auto" />
+                <Icon name="Clock" className="text-rose text-2xl mb-4 mx-auto animate-bounce-gentle" />
                 <h3 className="font-cormorant text-2xl font-medium text-foreground mb-3">Время</h3>
                 <p className="text-muted-foreground">Начало: 14:30</p>
                 <p className="text-muted-foreground">Окончание: 22:00</p>
               </CardContent>
             </Card>
 
-            <Card className="bg-white/60 backdrop-blur-sm border-rose/20 shadow-lg animate-fade-in" style={{animationDelay: '0.2s'}}>
+            <Card className="bg-white/60 backdrop-blur-sm border-rose/20 shadow-lg animate-fade-in hover:scale-105 transition-transform" style={{animationDelay: '0.2s'}}>
               <CardContent className="p-6 text-center">
-                <Icon name="MapPin" className="text-rose text-2xl mb-4 mx-auto" />
+                <Icon name="MapPin" className="text-rose text-2xl mb-4 mx-auto animate-bounce-gentle" style={{animationDelay: '0.5s'}} />
                 <h3 className="font-cormorant text-2xl font-medium text-foreground mb-3">Место</h3>
                 <p className="text-muted-foreground">ул. 50 лет Октября, 4/3</p>
                 <p className="text-muted-foreground">Ростов</p>
               </CardContent>
             </Card>
 
-            <Card className="bg-white/60 backdrop-blur-sm border-rose/20 shadow-lg animate-fade-in" style={{animationDelay: '0.4s'}}>
+            <Card className="bg-white/60 backdrop-blur-sm border-rose/20 shadow-lg animate-fade-in hover:scale-105 transition-transform" style={{animationDelay: '0.4s'}}>
               <CardContent className="p-6 text-center">
-                <Icon name="Calendar" className="text-rose text-2xl mb-4 mx-auto" />
+                <Icon name="Calendar" className="text-rose text-2xl mb-4 mx-auto animate-bounce-gentle" style={{animationDelay: '1s'}} />
                 <h3 className="font-cormorant text-2xl font-medium text-foreground mb-3">Программа</h3>
                 <p className="text-muted-foreground text-sm">Торжественная церемония</p>
                 <p className="text-muted-foreground text-sm">Банкет и танцы</p>
@@ -156,65 +181,68 @@ const Index = () => {
       </section>
 
       {/* Dress Code */}
-      <section className="py-20 px-4 bg-white/30">
-        <div className="max-w-4xl mx-auto">
+      <section className="py-20 px-4 bg-white/30 relative">
+        {/* Background Decoration */}
+        <div className="absolute inset-0 opacity-15" style={{backgroundImage: 'url(/img/cb9965d6-972c-4bab-b84c-e93528263d55.jpg)', backgroundSize: 'cover', backgroundPosition: 'center'}}></div>
+        
+        <div className="max-w-4xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <h2 className="font-cormorant text-4xl md:text-5xl font-light text-foreground mb-4">
+            <h2 className="font-cormorant text-4xl md:text-5xl font-light text-foreground mb-4 animate-slide-in-right">
               Дресс-код
             </h2>
-            <div className="w-24 h-0.5 bg-rose mx-auto"></div>
+            <div className="w-24 h-0.5 bg-rose mx-auto animate-fade-in" style={{animationDelay: '0.3s'}}></div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
             <div className="animate-fade-in">
-              <h3 className="font-cormorant text-2xl font-medium text-foreground mb-6 text-center">
+              <h3 className="font-cormorant text-2xl font-medium text-foreground mb-6 text-center animate-slide-in-left">
                 <Icon name="Palette" className="inline mr-2 text-rose" />
                 Цветовая палитра
               </h3>
               <div className="flex flex-wrap gap-4 justify-center mb-6">
-                <div className="text-center">
+                <div className="text-center animate-flower-bloom" style={{animationDelay: '1s'}}>
                   <div className="w-12 h-12 bg-yellow-100 rounded-full mx-auto mb-2 border-2 border-white shadow-md"></div>
                   <p className="text-sm text-muted-foreground">Бежевый</p>
                 </div>
-                <div className="text-center">
+                <div className="text-center animate-flower-bloom" style={{animationDelay: '1.2s'}}>
                   <div className="w-12 h-12 bg-orange-200 rounded-full mx-auto mb-2 border-2 border-white shadow-md"></div>
                   <p className="text-sm text-muted-foreground">Персиковый</p>
                 </div>
-                <div className="text-center">
+                <div className="text-center animate-flower-bloom" style={{animationDelay: '1.4s'}}>
                   <div className="w-12 h-12 bg-pink-200 rounded-full mx-auto mb-2 border-2 border-white shadow-md"></div>
                   <p className="text-sm text-muted-foreground">Пудровый</p>
                 </div>
-                <div className="text-center">
+                <div className="text-center animate-flower-bloom" style={{animationDelay: '1.6s'}}>
                   <div className="w-12 h-12 bg-blue-200 rounded-full mx-auto mb-2 border-2 border-white shadow-md"></div>
                   <p className="text-sm text-muted-foreground">Голубой</p>
                 </div>
-                <div className="text-center">
+                <div className="text-center animate-flower-bloom" style={{animationDelay: '1.8s'}}>
                   <div className="w-12 h-12 bg-purple-200 rounded-full mx-auto mb-2 border-2 border-white shadow-md"></div>
                   <p className="text-sm text-muted-foreground">Лавандовый</p>
                 </div>
               </div>
-              <p className="text-muted-foreground text-center">
+              <p className="text-muted-foreground text-center animate-fade-in" style={{animationDelay: '2s'}}>
                 Мы просим вас выбрать наряды в светлых, нежных тонах
               </p>
             </div>
 
             <div className="animate-fade-in" style={{animationDelay: '0.3s'}}>
-              <h3 className="font-cormorant text-2xl font-medium text-foreground mb-6 text-center">
+              <h3 className="font-cormorant text-2xl font-medium text-foreground mb-6 text-center animate-slide-in-right">
                 <Icon name="Sparkles" className="inline mr-2 text-rose" />
                 Для девушек
               </h3>
               <Card className="bg-white/60 backdrop-blur-sm border-rose/20 shadow-lg">
                 <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <Icon name="Circle" className="text-champagne mr-3 text-sm" />
+                  <div className="flex items-center mb-4 animate-slide-in-left" style={{animationDelay: '2.2s'}}>
+                    <Icon name="Circle" className="text-champagne mr-3 text-sm animate-pearl-shimmer" />
                     <span className="text-muted-foreground">Жемчужные серьги</span>
                   </div>
-                  <div className="flex items-center mb-4">
-                    <Icon name="Circle" className="text-champagne mr-3 text-sm" />
+                  <div className="flex items-center mb-4 animate-slide-in-left" style={{animationDelay: '2.4s'}}>
+                    <Icon name="Circle" className="text-champagne mr-3 text-sm animate-pearl-shimmer" style={{animationDelay: '0.5s'}} />
                     <span className="text-muted-foreground">Жемчужное колье</span>
                   </div>
-                  <div className="flex items-center">
-                    <Icon name="Circle" className="text-champagne mr-3 text-sm" />
+                  <div className="flex items-center animate-slide-in-left" style={{animationDelay: '2.6s'}}>
+                    <Icon name="Circle" className="text-champagne mr-3 text-sm animate-pearl-shimmer" style={{animationDelay: '1s'}} />
                     <span className="text-muted-foreground">Жемчужные браслеты</span>
                   </div>
                 </CardContent>
@@ -225,19 +253,25 @@ const Index = () => {
       </section>
 
       {/* Gifts */}
-      <section className="py-20 px-4">
-        <div className="max-w-3xl mx-auto text-center">
+      <section className="py-20 px-4 relative">
+        {/* Decorative Elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-16 right-16 text-yellow-300 text-xl animate-flower-bloom" style={{animationDelay: '1s'}}>💎</div>
+          <div className="absolute bottom-20 left-20 text-pink-300 text-lg animate-flower-bloom" style={{animationDelay: '2s'}}>💝</div>
+        </div>
+
+        <div className="max-w-3xl mx-auto text-center relative z-10">
           <div className="mb-16">
-            <h2 className="font-cormorant text-4xl md:text-5xl font-light text-foreground mb-4">
+            <h2 className="font-cormorant text-4xl md:text-5xl font-light text-foreground mb-4 animate-slide-in-left">
               Пожелания по подаркам
             </h2>
-            <div className="w-24 h-0.5 bg-rose mx-auto"></div>
+            <div className="w-24 h-0.5 bg-rose mx-auto animate-fade-in" style={{animationDelay: '0.3s'}}></div>
           </div>
 
-          <Card className="bg-white/60 backdrop-blur-sm border-rose/20 shadow-lg animate-fade-in">
+          <Card className="bg-white/60 backdrop-blur-sm border-rose/20 shadow-lg animate-fade-in" style={{animationDelay: '0.5s'}}>
             <CardContent className="p-8">
-              <Icon name="Gift" className="text-rose text-3xl mb-6 mx-auto" />
-              <p className="text-lg text-muted-foreground leading-relaxed font-light">
+              <Icon name="Gift" className="text-rose text-3xl mb-6 mx-auto animate-bounce-gentle" />
+              <p className="text-lg text-muted-foreground leading-relaxed font-light animate-fade-in" style={{animationDelay: '1s'}}>
                 Ваше присутствие — лучший подарок для нас! Но если вы хотите порадовать нас, 
                 будем благодарны за денежный вклад в наше будущее.
               </p>
@@ -247,19 +281,25 @@ const Index = () => {
       </section>
 
       {/* RSVP Form */}
-      <section className="py-20 px-4 bg-white/30">
-        <div className="max-w-3xl mx-auto">
+      <section className="py-20 px-4 bg-white/30 relative">
+        {/* Pearl decoration */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="w-5 h-5 bg-white/70 rounded-full absolute top-10 left-10 animate-float" style={{boxShadow: '0 0 15px rgba(255,255,255,0.7)'}}></div>
+          <div className="w-3 h-3 bg-white/60 rounded-full absolute bottom-16 right-20 animate-pearl-shimmer"></div>
+        </div>
+
+        <div className="max-w-3xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <h2 className="font-cormorant text-4xl md:text-5xl font-light text-foreground mb-4">
+            <h2 className="font-cormorant text-4xl md:text-5xl font-light text-foreground mb-4 animate-slide-in-right">
               Подтверждение присутствия
             </h2>
-            <div className="w-24 h-0.5 bg-rose mx-auto"></div>
+            <div className="w-24 h-0.5 bg-rose mx-auto animate-fade-in" style={{animationDelay: '0.3s'}}></div>
           </div>
 
-          <Card className="bg-white/60 backdrop-blur-sm border-rose/20 shadow-lg">
+          <Card className="bg-white/60 backdrop-blur-sm border-rose/20 shadow-lg animate-fade-in" style={{animationDelay: '0.5s'}}>
             <CardContent className="p-8">
               <form onSubmit={handleRSVPSubmit} className="space-y-6">
-                <div>
+                <div className="animate-slide-in-left" style={{animationDelay: '0.8s'}}>
                   <Label htmlFor="name" className="text-foreground font-medium">Ваше имя</Label>
                   <Input
                     id="name"
@@ -270,7 +310,7 @@ const Index = () => {
                   />
                 </div>
 
-                <div>
+                <div className="animate-slide-in-right" style={{animationDelay: '1s'}}>
                   <Label className="text-foreground font-medium">Сможете ли вы присутствовать?</Label>
                   <RadioGroup 
                     value={rsvpData.attendance} 
@@ -288,7 +328,7 @@ const Index = () => {
                   </RadioGroup>
                 </div>
 
-                <div>
+                <div className="animate-slide-in-left" style={{animationDelay: '1.2s'}}>
                   <Label htmlFor="guests" className="text-foreground font-medium">Количество гостей (включая вас)</Label>
                   <Input
                     id="guests"
@@ -301,7 +341,7 @@ const Index = () => {
                   />
                 </div>
 
-                <div>
+                <div className="animate-slide-in-right" style={{animationDelay: '1.4s'}}>
                   <Label className="text-foreground font-medium">Предпочтения по алкоголю</Label>
                   <RadioGroup 
                     value={rsvpData.alcohol} 
@@ -327,7 +367,7 @@ const Index = () => {
                   </RadioGroup>
                 </div>
 
-                <div>
+                <div className="animate-slide-in-left" style={{animationDelay: '1.6s'}}>
                   <Label htmlFor="dietary" className="text-foreground font-medium">Особые пожелания по питанию</Label>
                   <Textarea
                     id="dietary"
@@ -338,7 +378,7 @@ const Index = () => {
                   />
                 </div>
 
-                <div>
+                <div className="animate-slide-in-right" style={{animationDelay: '1.8s'}}>
                   <Label htmlFor="comments" className="text-foreground font-medium">Дополнительные комментарии</Label>
                   <Textarea
                     id="comments"
@@ -351,7 +391,8 @@ const Index = () => {
 
                 <Button 
                   type="submit" 
-                  className="w-full bg-rose hover:bg-rose/90 text-white font-medium py-3 rounded-lg transition-colors"
+                  className="w-full bg-rose hover:bg-rose/90 text-white font-medium py-3 rounded-lg transition-colors animate-bounce-gentle hover:scale-105"
+                  style={{animationDelay: '2s'}}
                 >
                   Отправить подтверждение
                 </Button>
@@ -362,21 +403,27 @@ const Index = () => {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto">
+      <section className="py-20 px-4 relative">
+        {/* Decorative elements */}
+        <div className="absolute inset-0 opacity-15">
+          <div className="absolute top-20 left-16 text-blue-300 text-lg animate-flower-bloom" style={{animationDelay: '1s'}}>🗺️</div>
+          <div className="absolute bottom-32 right-20 text-green-300 text-xl animate-flower-bloom" style={{animationDelay: '2s'}}>🚗</div>
+        </div>
+
+        <div className="max-w-4xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <h2 className="font-cormorant text-4xl md:text-5xl font-light text-foreground mb-4">
+            <h2 className="font-cormorant text-4xl md:text-5xl font-light text-foreground mb-4 animate-slide-in-left">
               Как добраться
             </h2>
-            <div className="w-24 h-0.5 bg-rose mx-auto"></div>
+            <div className="w-24 h-0.5 bg-rose mx-auto animate-fade-in" style={{animationDelay: '0.3s'}}></div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="bg-white/60 backdrop-blur-sm border-rose/20 shadow-lg">
+            <Card className="bg-white/60 backdrop-blur-sm border-rose/20 shadow-lg animate-slide-in-left">
               <CardContent className="p-6">
                 <h3 className="font-cormorant text-2xl font-medium text-foreground mb-4">Адрес</h3>
                 <div className="space-y-3">
-                  <div className="flex items-start">
+                  <div className="flex items-start animate-fade-in" style={{animationDelay: '1s'}}>
                     <Icon name="MapPin" className="text-rose mt-1 mr-3" />
                     <div>
                       <p className="font-medium text-foreground">ул. 50 лет Октября, 4/3</p>
@@ -386,7 +433,7 @@ const Index = () => {
                   
                   <Separator />
                   
-                  <div className="flex items-start">
+                  <div className="flex items-start animate-fade-in" style={{animationDelay: '1.2s'}}>
                     <Icon name="Car" className="text-rose mt-1 mr-3" />
                     <div>
                       <p className="font-medium text-foreground">Парковка</p>
@@ -394,7 +441,7 @@ const Index = () => {
                     </div>
                   </div>
                   
-                  <div className="flex items-start">
+                  <div className="flex items-start animate-fade-in" style={{animationDelay: '1.4s'}}>
                     <Icon name="Bus" className="text-rose mt-1 mr-3" />
                     <div>
                       <p className="font-medium text-foreground">Общественный транспорт</p>
@@ -405,15 +452,18 @@ const Index = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-white/60 backdrop-blur-sm border-rose/20 shadow-lg">
+            <Card className="bg-white/60 backdrop-blur-sm border-rose/20 shadow-lg animate-slide-in-right">
               <CardContent className="p-6">
                 <h3 className="font-cormorant text-2xl font-medium text-foreground mb-4">Карта</h3>
-                <div className="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
-                  <div className="text-center text-muted-foreground">
-                    <Icon name="MapPin" className="text-2xl mb-2 mx-auto text-rose" />
-                    <p>Интерактивная карта</p>
-                    <p className="text-sm">будет добавлена позже</p>
-                  </div>
+                <div className="h-64 rounded-lg overflow-hidden">
+                  <iframe 
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A47.23135670745602%2C39.72083649999998%2C16%2Cru_RU&amp;source=constructor" 
+                    width="100%" 
+                    height="100%" 
+                    frameBorder="0"
+                    className="rounded-lg"
+                    title="Карта местоположения свадьбы"
+                  ></iframe>
                 </div>
               </CardContent>
             </Card>
@@ -422,18 +472,24 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-16 px-4 text-center bg-white/50">
-        <div className="max-w-2xl mx-auto">
-          <div className="flex items-center justify-center mb-6">
+      <footer className="py-16 px-4 text-center bg-white/50 relative">
+        {/* Decorative pearls */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="w-4 h-4 bg-white/70 rounded-full absolute top-8 left-1/4 animate-pearl-shimmer" style={{boxShadow: '0 0 15px rgba(255,255,255,0.7)'}}></div>
+          <div className="w-6 h-6 bg-white/80 rounded-full absolute bottom-8 right-1/4 animate-float" style={{boxShadow: '0 0 20px rgba(255,255,255,0.8)'}}></div>
+        </div>
+
+        <div className="max-w-2xl mx-auto relative z-10">
+          <div className="flex items-center justify-center mb-6 animate-fade-in">
             <div className="w-16 h-0.5 bg-gradient-to-r from-transparent to-rose mr-4"></div>
             <Icon name="Heart" className="text-rose text-xl animate-pearl-shimmer" />
             <div className="w-16 h-0.5 bg-gradient-to-l from-transparent to-rose ml-4"></div>
           </div>
           
-          <p className="font-cormorant text-2xl font-light text-foreground mb-4">
+          <p className="font-cormorant text-2xl font-light text-foreground mb-4 animate-slide-in-left">
             Борис & Елизавета
           </p>
-          <p className="text-muted-foreground">
+          <p className="text-muted-foreground animate-fade-in" style={{animationDelay: '0.5s'}}>
             С любовью ждём встречи с вами 20 сентября 2025 года
           </p>
           
