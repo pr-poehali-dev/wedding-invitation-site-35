@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'cormorant': ['Cormorant Garamond', 'serif'],
+				'open': ['Open Sans', 'sans-serif'],
+			},
 			colors: {
 				// Wedding theme colors
 				pearl: '#F8F6F3',
