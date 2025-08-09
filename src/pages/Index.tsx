@@ -635,6 +635,83 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Host Contact Section */}
+      <section className="py-20 px-4 bg-white/20 relative">
+        {/* Decorative elements */}
+        <div className="absolute inset-0 opacity-15">
+          <div className="absolute top-16 left-12 text-purple-300 text-xl animate-flower-bloom" style={{animationDelay: '1s'}}>🎤</div>
+          <div className="absolute bottom-20 right-16 text-blue-300 text-lg animate-flower-bloom" style={{animationDelay: '2s'}}>✨</div>
+          <div className="w-5 h-5 bg-white/60 rounded-full absolute top-32 right-20 animate-pearl-shimmer" style={{boxShadow: '0 0 18px rgba(255,255,255,0.6)'}}></div>
+          <div className="w-3 h-3 bg-white/50 rounded-full absolute bottom-32 left-20 animate-float"></div>
+        </div>
+
+        <div className="max-w-4xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="font-cormorant text-4xl md:text-5xl font-light text-foreground mb-4 animate-slide-in-left">
+              Ведущий торжества
+            </h2>
+            <div className="w-24 h-0.5 bg-rose mx-auto animate-fade-in" style={{animationDelay: '0.3s'}}></div>
+          </div>
+
+          <Card className="bg-white/70 backdrop-blur-sm border-rose/20 shadow-xl animate-fade-in max-w-2xl mx-auto" style={{animationDelay: '0.5s'}}>
+            <CardContent className="p-8">
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                {/* Host Photo */}
+                <div className="animate-slide-in-left" style={{animationDelay: '0.8s'}}>
+                  <div className="relative">
+                    <img 
+                      src="https://cdn.poehali.dev/files/3945ab62-749b-4896-9f54-c39f57e09ff3.png" 
+                      alt="Ведущий торжества"
+                      className="w-48 h-48 object-cover rounded-full shadow-2xl border-4 border-white/50"
+                    />
+                    <div className="absolute -top-2 -right-2 w-6 h-6 bg-rose rounded-full animate-pulse shadow-lg"></div>
+                    <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-champagne rounded-full animate-pearl-shimmer"></div>
+                  </div>
+                </div>
+
+                {/* Host Info */}
+                <div className="flex-1 text-center md:text-left animate-slide-in-right" style={{animationDelay: '1s'}}>
+                  <h3 className="font-cormorant text-3xl font-semibold text-foreground mb-4">
+                    Профессиональный ведущий
+                  </h3>
+                  <p className="text-muted-foreground text-lg leading-relaxed mb-6">
+                    Опытный ведущий с безупречной репутацией создаст атмосферу праздника 
+                    и проведёт ваше торжество на высшем уровне. Индивидуальный подход 
+                    к каждой паре и незабываемые эмоции гарантированы.
+                  </p>
+                  
+                  {/* Contact Button */}
+                  <div className="animate-bounce-gentle" style={{animationDelay: '1.3s'}}>
+                    <a 
+                      href="https://vk.com/urlis" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-full font-medium shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                    >
+                      <Icon name="MessageCircle" className="mr-2" />
+                      Связаться с ведущим
+                      <Icon name="ExternalLink" className="ml-2 w-4 h-4" />
+                    </a>
+                  </div>
+                  
+                  {/* Additional Info */}
+                  <div className="mt-6 text-sm text-muted-foreground animate-fade-in" style={{animationDelay: '1.6s'}}>
+                    <div className="flex items-center justify-center md:justify-start space-x-2">
+                      <Icon name="Star" className="text-yellow-500 w-4 h-4" />
+                      <span>Более 200 успешных мероприятий</span>
+                    </div>
+                    <div className="flex items-center justify-center md:justify-start space-x-2 mt-1">
+                      <Icon name="Award" className="text-rose w-4 h-4" />
+                      <span>Профессиональное звуковое оборудование</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="py-16 px-4 text-center bg-white/50 relative">
         {/* Decorative pearls */}
