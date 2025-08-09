@@ -49,9 +49,35 @@ const Index = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const handleRSVPSubmit = (e: React.FormEvent) => {
+  const handleRSVPSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert('Спасибо за ваш ответ! Мы свяжемся с вами для уточнения деталей.');
+    const form = e.target as HTMLFormElement;
+    
+    try {
+      const response = await fetch('https://formspree.io/f/xqalwaky', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        alert('Спасибо за ваш ответ! Мы получили вашу заявку и свяжемся с вами для уточнения деталей.');
+        setRsvpData({
+          name: '',
+          attendance: '',
+          guests: '',
+          dietary: '',
+          alcohol: '',
+          comments: ''
+        });
+      } else {
+        throw new Error('Ошибка отправки');
+      }
+    } catch (error) {
+      alert('Произошла ошибка при отправке формы. Пожалуйста, попробуйте еще раз.');
+    }
   };
 
   if (!isInvitationOpen) {
@@ -476,10 +502,14 @@ const Index = () => {
           <Card className="bg-white/60 backdrop-blur-sm border-rose/20 shadow-lg animate-fade-in" style={{animationDelay: '0.5s'}}>
             <CardContent className="p-8">
               <form onSubmit={handleRSVPSubmit} className="space-y-6">
+                {/* Hidden fields for form submission */}
+                <input type="hidden" name="attendance" value={rsvpData.attendance} />
+                <input type="hidden" name="alcohol" value={rsvpData.alcohol} />
                 <div className="animate-slide-in-left" style={{animationDelay: '0.8s'}}>
                   <Label htmlFor="name" className="text-foreground font-medium">Ваше имя</Label>
                   <Input
                     id="name"
+                    name="name"
                     value={rsvpData.name}
                     onChange={(e) => setRsvpData({...rsvpData, name: e.target.value})}
                     className="mt-2"
@@ -490,6 +520,7 @@ const Index = () => {
                 <div className="animate-slide-in-right" style={{animationDelay: '1s'}}>
                   <Label className="text-foreground font-medium">Сможете ли вы присутствовать?</Label>
                   <RadioGroup 
+                    name="attendance"
                     value={rsvpData.attendance} 
                     onValueChange={(value) => setRsvpData({...rsvpData, attendance: value})}
                     className="mt-2"
@@ -510,6 +541,7 @@ const Index = () => {
                 <div className="animate-slide-in-right" style={{animationDelay: '1.4s'}}>
                   <Label className="text-foreground font-medium">Предпочтения по алкоголю</Label>
                   <RadioGroup 
+                    name="alcohol"
                     value={rsvpData.alcohol} 
                     onValueChange={(value) => setRsvpData({...rsvpData, alcohol: value})}
                     className="mt-2"
@@ -551,6 +583,7 @@ const Index = () => {
                   <Label htmlFor="comments" className="text-foreground font-medium">Дополнительные комментарии</Label>
                   <Textarea
                     id="comments"
+                    name="comments"
                     value={rsvpData.comments}
                     onChange={(e) => setRsvpData({...rsvpData, comments: e.target.value})}
                     placeholder="Ваши пожелания, вопросы или комментарии..."
