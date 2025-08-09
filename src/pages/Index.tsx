@@ -9,6 +9,7 @@ import { Separator } from '@/components/ui/separator';
 import Icon from '@/components/ui/icon';
 
 const Index = () => {
+  const [isInvitationOpen, setIsInvitationOpen] = useState(false);
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -53,8 +54,101 @@ const Index = () => {
     alert('Спасибо за ваш ответ! Мы свяжемся с вами для уточнения деталей.');
   };
 
+  if (!isInvitationOpen) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-pearl to-cream font-open relative overflow-hidden">
+        {/* Background Decorations */}
+        <div className="absolute inset-0 opacity-20">
+          {/* Floating Pearls */}
+          <div className="w-8 h-8 bg-white/80 rounded-full absolute top-20 left-10 animate-float shadow-lg" style={{boxShadow: '0 0 25px rgba(255,255,255,0.8)', animationDelay: '0s'}}></div>
+          <div className="w-6 h-6 bg-white/70 rounded-full absolute top-40 right-20 animate-pearl-shimmer" style={{boxShadow: '0 0 20px rgba(255,255,255,0.6)', animationDelay: '1s'}}></div>
+          <div className="w-10 h-10 bg-white/90 rounded-full absolute bottom-32 left-20 animate-float" style={{animationDelay: '2s', boxShadow: '0 0 30px rgba(255,255,255,0.9)'}}></div>
+          <div className="w-4 h-4 bg-white/60 rounded-full absolute bottom-20 right-16 animate-pearl-shimmer" style={{animationDelay: '3s'}}></div>
+          <div className="w-7 h-7 bg-white/75 rounded-full absolute top-60 left-1/4 animate-float" style={{animationDelay: '1.5s', boxShadow: '0 0 22px rgba(255,255,255,0.7)'}}></div>
+          <div className="w-9 h-9 bg-white/85 rounded-full absolute top-80 right-1/3 animate-pearl-shimmer" style={{animationDelay: '2.5s', boxShadow: '0 0 27px rgba(255,255,255,0.8)'}}></div>
+          
+          {/* Flower Elements */}
+          <div className="absolute top-16 right-10 text-pink-300 text-3xl animate-flower-bloom" style={{animationDelay: '2s'}}>🌸</div>
+          <div className="absolute bottom-40 left-16 text-rose-300 text-2xl animate-flower-bloom" style={{animationDelay: '3s'}}>🌹</div>
+          <div className="absolute top-1/3 left-8 text-purple-300 text-2xl animate-flower-bloom" style={{animationDelay: '4s'}}>💐</div>
+          <div className="absolute bottom-16 right-8 text-pink-400 text-3xl animate-flower-bloom" style={{animationDelay: '2.5s'}}>🌺</div>
+          <div className="absolute top-2/3 right-1/4 text-yellow-300 text-2xl animate-flower-bloom" style={{animationDelay: '3.5s'}}>🌼</div>
+          <div className="absolute bottom-1/3 left-1/3 text-red-300 text-2xl animate-flower-bloom" style={{animationDelay: '4.5s'}}>🌷</div>
+          
+          {/* Pearl Strings */}
+          <div className="absolute top-0 left-1/4 w-px h-40 bg-gradient-to-b from-white/60 to-transparent animate-fade-in" style={{animationDelay: '3s'}}></div>
+          <div className="absolute top-0 right-1/3 w-px h-48 bg-gradient-to-b from-white/40 to-transparent animate-fade-in" style={{animationDelay: '3.5s'}}></div>
+          
+          {/* Flying Hearts */}
+          <div className="absolute top-10 left-1/2 text-rose text-2xl animate-bounce" style={{animationDelay: '1s'}}>💕</div>
+          <div className="absolute top-32 left-2/3 text-pink-400 text-xl animate-bounce" style={{animationDelay: '2s'}}>💖</div>
+          <div className="absolute bottom-24 left-1/4 text-rose text-lg animate-bounce" style={{animationDelay: '3s'}}>💗</div>
+          <div className="absolute bottom-40 right-1/3 text-pink-300 text-2xl animate-bounce" style={{animationDelay: '4s'}}>💞</div>
+          <div className="absolute top-1/2 right-10 text-rose text-xl animate-bounce" style={{animationDelay: '1.5s'}}>💝</div>
+        </div>
+        
+        {/* Main Content */}
+        <div className="relative z-10 min-h-screen flex items-center justify-center px-4">
+          <div className="text-center max-w-lg mx-auto">
+            {/* Announcement */}
+            <div className="mb-12 animate-fade-in">
+              <h1 className="font-cormorant text-4xl md:text-5xl font-light text-foreground mb-4 animate-slide-in-left">
+                Это официально:
+              </h1>
+              <h2 className="font-cormorant text-5xl md:text-6xl font-medium text-rose mb-6 animate-slide-in-right" style={{animationDelay: '0.5s'}}>
+                мы женимся!
+              </h2>
+            </div>
+            
+            {/* Envelope */}
+            <div className="mb-12 animate-bounce-gentle" style={{animationDelay: '1s'}}>
+              <Card className="bg-gradient-to-br from-white/80 to-cream/60 backdrop-blur-sm border-rose/30 shadow-2xl max-w-sm mx-auto transform hover:scale-105 transition-transform duration-300">
+                <CardContent className="p-12 text-center relative">
+                  {/* Envelope Flap */}
+                  <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-rose/20 to-transparent rounded-t-lg border-b border-rose/20"></div>
+                  
+                  {/* Wax Seal */}
+                  <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-rose rounded-full flex items-center justify-center animate-pearl-shimmer">
+                    <Icon name="Heart" className="text-white text-sm" />
+                  </div>
+                  
+                  {/* Invitation Preview */}
+                  <div className="mt-8">
+                    <Icon name="Mail" className="text-rose text-4xl mb-4 mx-auto animate-bounce-gentle" />
+                    <p className="font-cormorant text-xl text-muted-foreground mb-2">Свадебное приглашение</p>
+                    <p className="text-sm text-muted-foreground">Борис & Елизавета</p>
+                    <p className="text-sm text-muted-foreground">20 сентября 2025</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+            
+            {/* Open Button */}
+            <div className="animate-fade-in" style={{animationDelay: '2s'}}>
+              <Button 
+                onClick={() => setIsInvitationOpen(true)}
+                className="bg-rose hover:bg-rose/90 text-white font-cormorant text-xl px-12 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 animate-pulse"
+              >
+                <Icon name="Heart" className="mr-2" />
+                Открыть приглашение
+                <Icon name="Heart" className="ml-2" />
+              </Button>
+            </div>
+            
+            {/* Decorative Elements */}
+            <div className="mt-8 flex justify-center space-x-6 animate-fade-in" style={{animationDelay: '2.5s'}}>
+              <div className="w-3 h-3 bg-rose rounded-full animate-pearl-shimmer"></div>
+              <div className="w-3 h-3 bg-champagne rounded-full animate-pearl-shimmer" style={{animationDelay: '0.5s'}}></div>
+              <div className="w-3 h-3 bg-rose rounded-full animate-pearl-shimmer" style={{animationDelay: '1s'}}></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pearl to-cream font-open">
+    <div className="min-h-screen bg-gradient-to-br from-pearl to-cream font-open animate-fade-in">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center text-center px-4" style={{backgroundImage: 'url(/img/2c1a9d42-c85c-4f1e-af45-53978ce1d70e.jpg)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundBlendMode: 'overlay'}}>
         {/* Pearl and Flower Decorations */}
