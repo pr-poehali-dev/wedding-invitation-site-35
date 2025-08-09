@@ -205,26 +205,11 @@ const Index = () => {
                 Цветовая палитра
               </h3>
               <div className="flex flex-wrap gap-4 justify-center mb-6">
-                <div className="text-center animate-flower-bloom" style={{animationDelay: '1s'}}>
-                  <div className="w-12 h-12 rounded-full mx-auto mb-2 border-2 border-white shadow-md" style={{backgroundColor: '#75331D'}}></div>
-                  <p className="text-xs text-muted-foreground">Каштановый</p>
-                </div>
-                <div className="text-center animate-flower-bloom" style={{animationDelay: '1.2s'}}>
-                  <div className="w-12 h-12 rounded-full mx-auto mb-2 border-2 border-white shadow-md" style={{backgroundColor: '#A19874'}}></div>
-                  <p className="text-xs text-muted-foreground">Оливковый</p>
-                </div>
-                <div className="text-center animate-flower-bloom" style={{animationDelay: '1.4s'}}>
-                  <div className="w-12 h-12 rounded-full mx-auto mb-2 border-2 border-white shadow-md" style={{backgroundColor: '#966964'}}></div>
-                  <p className="text-xs text-muted-foreground">Лиловый</p>
-                </div>
-                <div className="text-center animate-flower-bloom" style={{animationDelay: '1.6s'}}>
-                  <div className="w-12 h-12 rounded-full mx-auto mb-2 border-2 border-white shadow-md" style={{backgroundColor: '#C2816B'}}></div>
-                  <p className="text-xs text-muted-foreground">Терракота</p>
-                </div>
-                <div className="text-center animate-flower-bloom" style={{animationDelay: '1.8s'}}>
-                  <div className="w-12 h-12 rounded-full mx-auto mb-2 border-2 border-white shadow-md" style={{backgroundColor: '#D0AA95'}}></div>
-                  <p className="text-xs text-muted-foreground">Мокко</p>
-                </div>
+                <div className="w-12 h-12 rounded-full border-2 border-white shadow-md animate-flower-bloom" style={{backgroundColor: '#75331D', animationDelay: '1s'}}></div>
+                <div className="w-12 h-12 rounded-full border-2 border-white shadow-md animate-flower-bloom" style={{backgroundColor: '#A19874', animationDelay: '1.2s'}}></div>
+                <div className="w-12 h-12 rounded-full border-2 border-white shadow-md animate-flower-bloom" style={{backgroundColor: '#966964', animationDelay: '1.4s'}}></div>
+                <div className="w-12 h-12 rounded-full border-2 border-white shadow-md animate-flower-bloom" style={{backgroundColor: '#C2816B', animationDelay: '1.6s'}}></div>
+                <div className="w-12 h-12 rounded-full border-2 border-white shadow-md animate-flower-bloom" style={{backgroundColor: '#D0AA95', animationDelay: '1.8s'}}></div>
               </div>
             </div>
 
@@ -271,6 +256,80 @@ const Index = () => {
                 </Card>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Photos Section */}
+      <section className="py-20 px-4 bg-white/30 relative">
+        <div className="absolute inset-0 opacity-10">
+          <div className="w-6 h-6 bg-rose/30 rounded-full absolute top-16 left-16 animate-float"></div>
+          <div className="w-4 h-4 bg-champagne/40 rounded-full absolute bottom-20 right-20 animate-pearl-shimmer"></div>
+        </div>
+
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="font-cormorant text-4xl md:text-5xl font-light text-foreground mb-4">
+              Наша история
+            </h2>
+            <div className="w-24 h-0.5 bg-rose mx-auto"></div>
+          </div>
+
+          {/* Couple Photo */}
+          <div className="mb-16">
+            <Card className="bg-white/60 backdrop-blur-sm border-rose/20 shadow-lg max-w-2xl mx-auto">
+              <CardContent className="p-8 text-center">
+                <div className="mb-6">
+                  <img 
+                    src="https://cdn.poehali.dev/files/1fcb49ed-a6e9-469a-82b2-8f21ca35dd8e.jpg" 
+                    alt="Борис и Елизавета"
+                    className="w-full h-96 object-cover rounded-lg shadow-lg"
+                  />
+                </div>
+                <p className="font-cormorant text-xl text-muted-foreground font-light">
+                  Борис & Елизавета
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Venue Photos */}
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="bg-white/60 backdrop-blur-sm border-rose/20 shadow-lg">
+              <CardContent className="p-6">
+                <div className="mb-4">
+                  <img 
+                    src="/img/478da281-df3a-4762-ba2f-de54f18fb844.jpg" 
+                    alt="Гостиный двор - внешний вид"
+                    className="w-full h-48 object-cover rounded-lg shadow-lg"
+                  />
+                </div>
+                <h3 className="font-cormorant text-2xl font-medium text-foreground mb-2 text-center">
+                  Гостиный двор
+                </h3>
+                <p className="text-muted-foreground text-center text-sm">
+                  Элегантный фасад нашего торжественного места
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/60 backdrop-blur-sm border-rose/20 shadow-lg">
+              <CardContent className="p-6">
+                <div className="mb-4">
+                  <img 
+                    src="/img/6aa31590-ceb0-4797-8dd7-3934083ecf00.jpg" 
+                    alt="Зал Атриум"
+                    className="w-full h-48 object-cover rounded-lg shadow-lg"
+                  />
+                </div>
+                <h3 className="font-cormorant text-2xl font-medium text-foreground mb-2 text-center">
+                  Зал Атриум
+                </h3>
+                <p className="text-muted-foreground text-center text-sm">
+                  Роскошный банкетный зал для нашего торжества
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
