@@ -87,12 +87,17 @@ const Index = () => {
           <div className="text-center max-w-lg mx-auto">
             {/* Announcement */}
             <div className="mb-12 animate-fade-in">
-              <h1 className="font-cormorant text-4xl md:text-5xl font-light text-foreground mb-4 animate-slide-in-left">
-                Это официально:
-              </h1>
-              <h2 className="font-cormorant text-5xl md:text-6xl font-medium text-pink-600 mb-6 animate-slide-in-right" style={{animationDelay: '0.5s'}}>
-                мы женимся!
-              </h2>
+              {/* Elegant backdrop for text */}
+              <div className="bg-white/70 backdrop-blur-md rounded-3xl px-12 py-8 shadow-xl border border-white/30 inline-block">
+                <h1 className="font-cormorant text-4xl md:text-5xl font-light text-gray-700 mb-4 animate-slide-in-left tracking-wide">
+                  Это официально:
+                </h1>
+                <h2 className="font-cormorant text-6xl md:text-7xl font-bold text-rose-600 mb-2 animate-slide-in-right tracking-wider" style={{animationDelay: '0.5s', textShadow: '2px 2px 4px rgba(0,0,0,0.1)'}}>
+                  мы женимся!
+                </h2>
+                {/* Decorative line */}
+                <div className="w-32 h-0.5 bg-gradient-to-r from-transparent via-rose-400 to-transparent mx-auto mt-4 animate-fade-in" style={{animationDelay: '1s'}}></div>
+              </div>
             </div>
             
             {/* Envelope */}
