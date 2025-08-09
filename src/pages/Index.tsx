@@ -390,7 +390,7 @@ const Index = () => {
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="font-cormorant text-4xl md:text-5xl font-light text-foreground mb-4">
-              Наша история
+              Начало нашей истории
             </h2>
             <div className="w-24 h-0.5 bg-rose mx-auto"></div>
           </div>
