@@ -672,12 +672,10 @@ const Index = () => {
                 {/* Host Info */}
                 <div className="flex-1 text-center md:text-left animate-slide-in-right" style={{animationDelay: '1s'}}>
                   <h3 className="font-cormorant text-3xl font-semibold text-foreground mb-4">
-                    Профессиональный ведущий
+                    Илья Урлис
                   </h3>
                   <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                    Опытный ведущий с безупречной репутацией создаст атмосферу праздника 
-                    и проведёт ваше торжество на высшем уровне. Индивидуальный подход 
-                    к каждой паре и незабываемые эмоции гарантированы.
+                    Ведущий нашего торжества - Илья Урлис, если вы захотите преподнести нам творческий подарок или сделать сюрприз, можете обращаться к нему.
                   </p>
                   
                   {/* Contact Button */}
@@ -689,21 +687,9 @@ const Index = () => {
                       className="inline-flex items-center bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-full font-medium shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
                     >
                       <Icon name="MessageCircle" className="mr-2" />
-                      Связаться с ведущим
+                      Связаться с Ильёй
                       <Icon name="ExternalLink" className="ml-2 w-4 h-4" />
                     </a>
-                  </div>
-                  
-                  {/* Additional Info */}
-                  <div className="mt-6 text-sm text-muted-foreground animate-fade-in" style={{animationDelay: '1.6s'}}>
-                    <div className="flex items-center justify-center md:justify-start space-x-2">
-                      <Icon name="Star" className="text-yellow-500 w-4 h-4" />
-                      <span>Более 200 успешных мероприятий</span>
-                    </div>
-                    <div className="flex items-center justify-center md:justify-start space-x-2 mt-1">
-                      <Icon name="Award" className="text-rose w-4 h-4" />
-                      <span>Профессиональное звуковое оборудование</span>
-                    </div>
                   </div>
                 </div>
               </div>
