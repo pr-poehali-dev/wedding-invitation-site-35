@@ -497,6 +497,9 @@ const Index = () => {
               Подтверждение присутствия
             </h2>
             <div className="w-24 h-0.5 bg-rose mx-auto animate-fade-in" style={{animationDelay: '0.3s'}}></div>
+            <p className="text-muted-foreground mt-6 text-lg animate-fade-in" style={{animationDelay: '0.6s'}}>
+              Просим подтвердить ваше присутствие до 31.08.2025
+            </p>
           </div>
 
           <Card className="bg-white/60 backdrop-blur-sm border-rose/20 shadow-lg animate-fade-in" style={{animationDelay: '0.5s'}}>
