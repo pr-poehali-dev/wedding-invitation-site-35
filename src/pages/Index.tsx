@@ -153,9 +153,13 @@ const Index = () => {
             <Card className="bg-white/60 backdrop-blur-sm border-rose/20 shadow-lg animate-fade-in hover:scale-105 transition-transform">
               <CardContent className="p-6 text-center">
                 <Icon name="Clock" className="text-rose text-2xl mb-4 mx-auto animate-bounce-gentle" />
-                <h3 className="font-cormorant text-2xl font-medium text-foreground mb-3">Время</h3>
-                <p className="text-muted-foreground">Начало: 14:30</p>
-                <p className="text-muted-foreground">Окончание: 22:00</p>
+                <h3 className="font-cormorant text-2xl font-medium text-foreground mb-3">Программа</h3>
+                <div className="space-y-1 text-sm">
+                  <p className="text-muted-foreground">14:15 - сбор гостей</p>
+                  <p className="text-muted-foreground">15:00 - церемония</p>
+                  <p className="text-muted-foreground">16:00 - банкет</p>
+                  <p className="text-muted-foreground">22:00 - завершение</p>
+                </div>
               </CardContent>
             </Card>
 
@@ -163,6 +167,7 @@ const Index = () => {
               <CardContent className="p-6 text-center">
                 <Icon name="MapPin" className="text-rose text-2xl mb-4 mx-auto animate-bounce-gentle" style={{animationDelay: '0.5s'}} />
                 <h3 className="font-cormorant text-2xl font-medium text-foreground mb-3">Место</h3>
+                <p className="font-medium text-foreground">Гостиный Двор</p>
                 <p className="text-muted-foreground">ул. 50 лет Октября, 4/3</p>
                 <p className="text-muted-foreground">Ростов</p>
               </CardContent>
@@ -201,52 +206,70 @@ const Index = () => {
               </h3>
               <div className="flex flex-wrap gap-4 justify-center mb-6">
                 <div className="text-center animate-flower-bloom" style={{animationDelay: '1s'}}>
-                  <div className="w-12 h-12 bg-yellow-100 rounded-full mx-auto mb-2 border-2 border-white shadow-md"></div>
-                  <p className="text-sm text-muted-foreground">Бежевый</p>
+                  <div className="w-12 h-12 rounded-full mx-auto mb-2 border-2 border-white shadow-md" style={{backgroundColor: '#75331D'}}></div>
+                  <p className="text-xs text-muted-foreground">Каштановый</p>
                 </div>
                 <div className="text-center animate-flower-bloom" style={{animationDelay: '1.2s'}}>
-                  <div className="w-12 h-12 bg-orange-200 rounded-full mx-auto mb-2 border-2 border-white shadow-md"></div>
-                  <p className="text-sm text-muted-foreground">Персиковый</p>
+                  <div className="w-12 h-12 rounded-full mx-auto mb-2 border-2 border-white shadow-md" style={{backgroundColor: '#A19874'}}></div>
+                  <p className="text-xs text-muted-foreground">Оливковый</p>
                 </div>
                 <div className="text-center animate-flower-bloom" style={{animationDelay: '1.4s'}}>
-                  <div className="w-12 h-12 bg-pink-200 rounded-full mx-auto mb-2 border-2 border-white shadow-md"></div>
-                  <p className="text-sm text-muted-foreground">Пудровый</p>
+                  <div className="w-12 h-12 rounded-full mx-auto mb-2 border-2 border-white shadow-md" style={{backgroundColor: '#966964'}}></div>
+                  <p className="text-xs text-muted-foreground">Лиловый</p>
                 </div>
                 <div className="text-center animate-flower-bloom" style={{animationDelay: '1.6s'}}>
-                  <div className="w-12 h-12 bg-blue-200 rounded-full mx-auto mb-2 border-2 border-white shadow-md"></div>
-                  <p className="text-sm text-muted-foreground">Голубой</p>
+                  <div className="w-12 h-12 rounded-full mx-auto mb-2 border-2 border-white shadow-md" style={{backgroundColor: '#C2816B'}}></div>
+                  <p className="text-xs text-muted-foreground">Терракота</p>
                 </div>
                 <div className="text-center animate-flower-bloom" style={{animationDelay: '1.8s'}}>
-                  <div className="w-12 h-12 bg-purple-200 rounded-full mx-auto mb-2 border-2 border-white shadow-md"></div>
-                  <p className="text-sm text-muted-foreground">Лавандовый</p>
+                  <div className="w-12 h-12 rounded-full mx-auto mb-2 border-2 border-white shadow-md" style={{backgroundColor: '#D0AA95'}}></div>
+                  <p className="text-xs text-muted-foreground">Мокко</p>
                 </div>
               </div>
-              <p className="text-muted-foreground text-center animate-fade-in" style={{animationDelay: '2s'}}>
-                Мы просим вас выбрать наряды в светлых, нежных тонах
-              </p>
             </div>
 
-            <div className="animate-fade-in" style={{animationDelay: '0.3s'}}>
-              <h3 className="font-cormorant text-2xl font-medium text-foreground mb-6 text-center animate-slide-in-right">
-                <Icon name="Sparkles" className="inline mr-2 text-rose" />
-                Для девушек
-              </h3>
-              <Card className="bg-white/60 backdrop-blur-sm border-rose/20 shadow-lg">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4 animate-slide-in-left" style={{animationDelay: '2.2s'}}>
-                    <Icon name="Circle" className="text-champagne mr-3 text-sm animate-pearl-shimmer" />
-                    <span className="text-muted-foreground">Жемчужные серьги</span>
-                  </div>
-                  <div className="flex items-center mb-4 animate-slide-in-left" style={{animationDelay: '2.4s'}}>
-                    <Icon name="Circle" className="text-champagne mr-3 text-sm animate-pearl-shimmer" style={{animationDelay: '0.5s'}} />
-                    <span className="text-muted-foreground">Жемчужное колье</span>
-                  </div>
-                  <div className="flex items-center animate-slide-in-left" style={{animationDelay: '2.6s'}}>
-                    <Icon name="Circle" className="text-champagne mr-3 text-sm animate-pearl-shimmer" style={{animationDelay: '1s'}} />
-                    <span className="text-muted-foreground">Жемчужные браслеты</span>
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="grid md:grid-cols-2 gap-6 animate-fade-in" style={{animationDelay: '0.3s'}}>
+              <div>
+                <h3 className="font-cormorant text-2xl font-medium text-foreground mb-6 text-center animate-slide-in-left">
+                  <Icon name="Sparkles" className="inline mr-2 text-rose" />
+                  Для девушек
+                </h3>
+                <Card className="bg-white/60 backdrop-blur-sm border-rose/20 shadow-lg">
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-4 animate-slide-in-left" style={{animationDelay: '2.2s'}}>
+                      <Icon name="Circle" className="text-champagne mr-3 text-sm animate-pearl-shimmer" />
+                      <span className="text-muted-foreground">Жемчужные серьги</span>
+                    </div>
+                    <div className="flex items-center mb-4 animate-slide-in-left" style={{animationDelay: '2.4s'}}>
+                      <Icon name="Circle" className="text-champagne mr-3 text-sm animate-pearl-shimmer" style={{animationDelay: '0.5s'}} />
+                      <span className="text-muted-foreground">Жемчужное колье</span>
+                    </div>
+                    <div className="flex items-center animate-slide-in-left" style={{animationDelay: '2.6s'}}>
+                      <Icon name="Circle" className="text-champagne mr-3 text-sm animate-pearl-shimmer" style={{animationDelay: '1s'}} />
+                      <span className="text-muted-foreground">Жемчужные браслеты</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+              
+              <div>
+                <h3 className="font-cormorant text-2xl font-medium text-foreground mb-6 text-center animate-slide-in-right">
+                  <Icon name="ShirtIcon" className="inline mr-2 text-rose" fallback="Users" />
+                  Для мужчин
+                </h3>
+                <Card className="bg-white/60 backdrop-blur-sm border-rose/20 shadow-lg">
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-4 animate-slide-in-right" style={{animationDelay: '2.2s'}}>
+                      <Icon name="Circle" className="text-champagne mr-3 text-sm animate-pearl-shimmer" />
+                      <span className="text-muted-foreground">Классические брюки</span>
+                    </div>
+                    <div className="flex items-center animate-slide-in-right" style={{animationDelay: '2.4s'}}>
+                      <Icon name="Circle" className="text-champagne mr-3 text-sm animate-pearl-shimmer" style={{animationDelay: '0.5s'}} />
+                      <span className="text-muted-foreground">Белая рубашка</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </div>
@@ -272,8 +295,9 @@ const Index = () => {
             <CardContent className="p-8">
               <Icon name="Gift" className="text-rose text-3xl mb-6 mx-auto animate-bounce-gentle" />
               <p className="text-lg text-muted-foreground leading-relaxed font-light animate-fade-in" style={{animationDelay: '1s'}}>
-                Ваше присутствие — лучший подарок для нас! Но если вы хотите порадовать нас, 
-                будем благодарны за денежный вклад в наше будущее.
+                Самым главным подарком для нас будет ваше хорошее настроение на нашей свадьбе. 
+                А чтобы руки были свободны для крепких объятий, будем рады легким подаркам в конвертах 
+                и вашему творческому подходу к поздравлению.
               </p>
             </CardContent>
           </Card>
@@ -349,34 +373,37 @@ const Index = () => {
                     className="mt-2"
                   >
                     <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="wine" id="wine" />
-                      <Label htmlFor="wine">Вино</Label>
+                      <RadioGroupItem value="white-wine" id="white-wine" />
+                      <Label htmlFor="white-wine">Вино белое</Label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="red-wine" id="red-wine" />
+                      <Label htmlFor="red-wine">Вино красное</Label>
                     </div>
                     <div className="flex items-center space-x-2">
                       <RadioGroupItem value="champagne" id="champagne" />
                       <Label htmlFor="champagne">Шампанское</Label>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="cocktails" id="cocktails" />
-                      <Label htmlFor="cocktails">Коктейли</Label>
+                      <RadioGroupItem value="vodka" id="vodka" />
+                      <Label htmlFor="vodka">Водка</Label>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <RadioGroupItem value="none" id="none" />
-                      <Label htmlFor="none">Безалкогольные напитки</Label>
+                      <RadioGroupItem value="whiskey" id="whiskey" />
+                      <Label htmlFor="whiskey">Виски</Label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="cognac" id="cognac" />
+                      <Label htmlFor="cognac">Коньяк</Label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="no-alcohol" id="no-alcohol" />
+                      <Label htmlFor="no-alcohol">Я не пью алкоголь</Label>
                     </div>
                   </RadioGroup>
                 </div>
 
-                <div className="animate-slide-in-left" style={{animationDelay: '1.6s'}}>
-                  <Label htmlFor="dietary" className="text-foreground font-medium">Особые пожелания по питанию</Label>
-                  <Textarea
-                    id="dietary"
-                    value={rsvpData.dietary}
-                    onChange={(e) => setRsvpData({...rsvpData, dietary: e.target.value})}
-                    placeholder="Вегетарианство, аллергии, другие особенности..."
-                    className="mt-2"
-                  />
-                </div>
+
 
                 <div className="animate-slide-in-right" style={{animationDelay: '1.8s'}}>
                   <Label htmlFor="comments" className="text-foreground font-medium">Дополнительные комментарии</Label>
@@ -426,7 +453,8 @@ const Index = () => {
                   <div className="flex items-start animate-fade-in" style={{animationDelay: '1s'}}>
                     <Icon name="MapPin" className="text-rose mt-1 mr-3" />
                     <div>
-                      <p className="font-medium text-foreground">ул. 50 лет Октября, 4/3</p>
+                      <p className="font-medium text-foreground">Гостиный двор</p>
+                      <p className="text-muted-foreground">ул. 50 лет Октября, 4/3</p>
                       <p className="text-muted-foreground">Ростов</p>
                     </div>
                   </div>
@@ -441,13 +469,7 @@ const Index = () => {
                     </div>
                   </div>
                   
-                  <div className="flex items-start animate-fade-in" style={{animationDelay: '1.4s'}}>
-                    <Icon name="Bus" className="text-rose mt-1 mr-3" />
-                    <div>
-                      <p className="font-medium text-foreground">Общественный транспорт</p>
-                      <p className="text-muted-foreground text-sm">Автобусы №15, 32 до остановки "50 лет Октября"</p>
-                    </div>
-                  </div>
+
                 </div>
               </CardContent>
             </Card>
