@@ -299,7 +299,7 @@ const Index = () => {
               <CardContent className="p-6">
                 <div className="mb-4">
                   <img 
-                    src="/img/478da281-df3a-4762-ba2f-de54f18fb844.jpg" 
+                    src="https://cdn.poehali.dev/files/418a4432-2623-4a75-9b9f-aaa235700c41.png" 
                     alt="Гостиный двор - внешний вид"
                     className="w-full h-48 object-cover rounded-lg shadow-lg"
                   />
@@ -317,7 +317,7 @@ const Index = () => {
               <CardContent className="p-6">
                 <div className="mb-4">
                   <img 
-                    src="/img/6aa31590-ceb0-4797-8dd7-3934083ecf00.jpg" 
+                    src="https://cdn.poehali.dev/files/d90fa3dc-afcd-4ae7-bfea-dd1cb3950039.png" 
                     alt="Зал Атриум"
                     className="w-full h-48 object-cover rounded-lg shadow-lg"
                   />
@@ -411,18 +411,7 @@ const Index = () => {
                   </RadioGroup>
                 </div>
 
-                <div className="animate-slide-in-left" style={{animationDelay: '1.2s'}}>
-                  <Label htmlFor="guests" className="text-foreground font-medium">Количество гостей (включая вас)</Label>
-                  <Input
-                    id="guests"
-                    type="number"
-                    min="1"
-                    max="10"
-                    value={rsvpData.guests}
-                    onChange={(e) => setRsvpData({...rsvpData, guests: e.target.value})}
-                    className="mt-2"
-                  />
-                </div>
+
 
                 <div className="animate-slide-in-right" style={{animationDelay: '1.4s'}}>
                   <Label className="text-foreground font-medium">Предпочтения по алкоголю</Label>
