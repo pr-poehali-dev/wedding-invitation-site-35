@@ -58,67 +58,66 @@ const Index = () => {
     return (
       <div className="min-h-screen bg-gradient-to-br from-pearl to-cream font-open relative overflow-hidden">
         {/* Background Decorations */}
-        <div className="absolute inset-0 opacity-25">
-          {/* Pearl Collections */}
-          <div className="w-12 h-12 bg-white/90 rounded-full absolute top-16 left-12 animate-float shadow-lg" style={{boxShadow: '0 0 30px rgba(255,255,255,0.9)', animationDelay: '0s'}}></div>
-          <div className="w-8 h-8 bg-white/80 rounded-full absolute top-32 left-20 animate-pearl-shimmer" style={{boxShadow: '0 0 25px rgba(255,255,255,0.8)', animationDelay: '1s'}}></div>
-          <div className="w-6 h-6 bg-white/70 rounded-full absolute top-48 left-16 animate-float" style={{boxShadow: '0 0 20px rgba(255,255,255,0.7)', animationDelay: '2s'}}></div>
-          <div className="w-4 h-4 bg-white/60 rounded-full absolute top-56 left-24 animate-pearl-shimmer" style={{animationDelay: '3s'}}></div>
+        <div className="absolute inset-0 opacity-30">
+          {/* Pearl Collections - Elegant scattered arrangement */}
+          <div className="w-16 h-16 bg-gradient-radial from-white/95 to-white/70 rounded-full absolute top-20 left-16 animate-float shadow-2xl" style={{boxShadow: '0 0 40px rgba(255,255,255,0.9), inset 0 0 20px rgba(255,255,255,0.3)', animationDelay: '0s'}}></div>
+          <div className="w-10 h-10 bg-gradient-radial from-white/90 to-white/60 rounded-full absolute top-40 left-28 animate-pearl-shimmer shadow-xl" style={{boxShadow: '0 0 30px rgba(255,255,255,0.8)', animationDelay: '1s'}}></div>
+          <div className="w-6 h-6 bg-gradient-radial from-white/80 to-white/50 rounded-full absolute top-60 left-20 animate-float shadow-lg" style={{boxShadow: '0 0 20px rgba(255,255,255,0.7)', animationDelay: '2s'}}></div>
+          <div className="w-4 h-4 bg-white/70 rounded-full absolute top-72 left-32 animate-pearl-shimmer" style={{boxShadow: '0 0 15px rgba(255,255,255,0.6)', animationDelay: '3s'}}></div>
+          <div className="w-8 h-8 bg-gradient-radial from-white/85 to-white/55 rounded-full absolute top-84 left-24 animate-float shadow-lg" style={{boxShadow: '0 0 25px rgba(255,255,255,0.8)', animationDelay: '1.5s'}}></div>
           
-          <div className="w-10 h-10 bg-white/85 rounded-full absolute top-24 right-16 animate-pearl-shimmer" style={{boxShadow: '0 0 28px rgba(255,255,255,0.85)', animationDelay: '1.5s'}}></div>
-          <div className="w-7 h-7 bg-white/75 rounded-full absolute top-40 right-12 animate-float" style={{boxShadow: '0 0 22px rgba(255,255,255,0.75)', animationDelay: '2.5s'}}></div>
-          <div className="w-5 h-5 bg-white/65 rounded-full absolute top-52 right-20 animate-pearl-shimmer" style={{animationDelay: '3.5s'}}></div>
+          <div className="w-14 h-14 bg-gradient-radial from-white/95 to-white/70 rounded-full absolute top-24 right-20 animate-pearl-shimmer shadow-2xl" style={{boxShadow: '0 0 35px rgba(255,255,255,0.9)', animationDelay: '1.5s'}}></div>
+          <div className="w-9 h-9 bg-gradient-radial from-white/85 to-white/55 rounded-full absolute top-48 right-12 animate-float shadow-xl" style={{boxShadow: '0 0 28px rgba(255,255,255,0.8)', animationDelay: '2.5s'}}></div>
+          <div className="w-5 h-5 bg-white/75 rounded-full absolute top-68 right-28 animate-pearl-shimmer shadow-lg" style={{boxShadow: '0 0 18px rgba(255,255,255,0.7)', animationDelay: '3.5s'}}></div>
+          <div className="w-12 h-12 bg-gradient-radial from-white/90 to-white/60 rounded-full absolute top-88 right-16 animate-float shadow-xl" style={{boxShadow: '0 0 32px rgba(255,255,255,0.85)', animationDelay: '0.8s'}}></div>
           
-          <div className="w-9 h-9 bg-white/80 rounded-full absolute bottom-20 left-14 animate-float" style={{boxShadow: '0 0 27px rgba(255,255,255,0.8)', animationDelay: '2s'}}></div>
-          <div className="w-6 h-6 bg-white/70 rounded-full absolute bottom-32 left-10 animate-pearl-shimmer" style={{boxShadow: '0 0 20px rgba(255,255,255,0.7)', animationDelay: '3s'}}></div>
-          <div className="w-11 h-11 bg-white/85 rounded-full absolute bottom-44 left-20 animate-float" style={{boxShadow: '0 0 32px rgba(255,255,255,0.85)', animationDelay: '1s'}}></div>
+          <div className="w-11 h-11 bg-gradient-radial from-white/90 to-white/60 rounded-full absolute bottom-24 left-18 animate-float shadow-xl" style={{boxShadow: '0 0 30px rgba(255,255,255,0.85)', animationDelay: '2s'}}></div>
+          <div className="w-7 h-7 bg-gradient-radial from-white/80 to-white/50 rounded-full absolute bottom-40 left-12 animate-pearl-shimmer shadow-lg" style={{boxShadow: '0 0 22px rgba(255,255,255,0.75)', animationDelay: '3s'}}></div>
+          <div className="w-15 h-15 bg-gradient-radial from-white/95 to-white/70 rounded-full absolute bottom-56 left-24 animate-float shadow-2xl" style={{boxShadow: '0 0 38px rgba(255,255,255,0.9)', animationDelay: '1s'}}></div>
           
-          <div className="w-8 h-8 bg-white/75 rounded-full absolute bottom-24 right-18 animate-pearl-shimmer" style={{boxShadow: '0 0 25px rgba(255,255,255,0.75)', animationDelay: '4s'}}></div>
-          <div className="w-5 h-5 bg-white/65 rounded-full absolute bottom-36 right-14 animate-float" style={{animationDelay: '1.5s'}}></div>
-          <div className="w-10 h-10 bg-white/80 rounded-full absolute bottom-48 right-22 animate-pearl-shimmer" style={{boxShadow: '0 0 28px rgba(255,255,255,0.8)', animationDelay: '2.5s'}}></div>
+          <div className="w-13 h-13 bg-gradient-radial from-white/90 to-white/60 rounded-full absolute bottom-28 right-22 animate-pearl-shimmer shadow-xl" style={{boxShadow: '0 0 33px rgba(255,255,255,0.85)', animationDelay: '4s'}}></div>
+          <div className="w-6 h-6 bg-white/75 rounded-full absolute bottom-44 right-14 animate-float shadow-lg" style={{boxShadow: '0 0 20px rgba(255,255,255,0.7)', animationDelay: '1.5s'}}></div>
+          <div className="w-8 h-8 bg-gradient-radial from-white/85 to-white/55 rounded-full absolute bottom-60 right-26 animate-pearl-shimmer shadow-xl" style={{boxShadow: '0 0 25px rgba(255,255,255,0.8)', animationDelay: '2.5s'}}></div>
           
-          {/* Center scattered pearls */}
-          <div className="w-7 h-7 bg-white/75 rounded-full absolute top-60 left-1/4 animate-float" style={{boxShadow: '0 0 22px rgba(255,255,255,0.75)', animationDelay: '1.5s'}}></div>
-          <div className="w-9 h-9 bg-white/85 rounded-full absolute top-80 right-1/3 animate-pearl-shimmer" style={{boxShadow: '0 0 27px rgba(255,255,255,0.85)', animationDelay: '2.5s'}}></div>
-          <div className="w-5 h-5 bg-white/65 rounded-full absolute top-96 left-1/3 animate-float" style={{animationDelay: '3.5s'}}></div>
-          <div className="w-6 h-6 bg-white/70 rounded-full absolute bottom-60 right-1/4 animate-pearl-shimmer" style={{boxShadow: '0 0 20px rgba(255,255,255,0.7)', animationDelay: '4s'}}></div>
+          {/* Center area pearls */}
+          <div className="w-9 h-9 bg-gradient-radial from-white/85 to-white/55 rounded-full absolute top-1/2 left-1/4 animate-float shadow-xl" style={{boxShadow: '0 0 28px rgba(255,255,255,0.8)', animationDelay: '1.8s'}}></div>
+          <div className="w-12 h-12 bg-gradient-radial from-white/90 to-white/60 rounded-full absolute top-2/3 right-1/3 animate-pearl-shimmer shadow-xl" style={{boxShadow: '0 0 32px rgba(255,255,255,0.85)', animationDelay: '2.8s'}}></div>
+          <div className="w-5 h-5 bg-white/70 rounded-full absolute bottom-1/3 left-1/3 animate-float shadow-lg" style={{boxShadow: '0 0 18px rgba(255,255,255,0.7)', animationDelay: '3.8s'}}></div>
           
-          {/* Natural Flower Elements */}
-          <div className="absolute top-12 right-8 text-pink-200 text-4xl animate-flower-bloom" style={{animationDelay: '2s'}}>🌸</div>
-          <div className="absolute top-28 right-24 text-pink-300 text-2xl animate-flower-bloom" style={{animationDelay: '2.3s'}}>🌸</div>
-          <div className="absolute top-44 right-16 text-pink-100 text-3xl animate-flower-bloom" style={{animationDelay: '2.6s'}}>🌸</div>
+          {/* Natural Flower Petals - CSS created */}
+          <div className="absolute top-16 right-12 w-6 h-6 bg-pink-200/80 rounded-full animate-flower-bloom" style={{clipPath: 'polygon(50% 0%, 80% 50%, 50% 100%, 20% 50%)', animationDelay: '2s'}}></div>
+          <div className="absolute top-32 right-28 w-4 h-4 bg-pink-300/70 rounded-full animate-flower-bloom" style={{clipPath: 'polygon(50% 0%, 80% 50%, 50% 100%, 20% 50%)', animationDelay: '2.3s'}}></div>
+          <div className="absolute top-48 right-16 w-8 h-8 bg-pink-100/90 rounded-full animate-flower-bloom" style={{clipPath: 'polygon(50% 0%, 80% 50%, 50% 100%, 20% 50%)', animationDelay: '2.6s'}}></div>
+          <div className="absolute top-24 right-20 w-3 h-3 bg-white/80 rounded-full animate-flower-bloom" style={{animationDelay: '2.9s'}}></div>
           
-          <div className="absolute bottom-16 left-8 text-rose-200 text-3xl animate-flower-bloom" style={{animationDelay: '3s'}}>🌹</div>
-          <div className="absolute bottom-32 left-20 text-rose-300 text-2xl animate-flower-bloom" style={{animationDelay: '3.3s'}}>🌹</div>
-          <div className="absolute bottom-48 left-12 text-rose-100 text-4xl animate-flower-bloom" style={{animationDelay: '3.6s'}}>🌹</div>
+          <div className="absolute bottom-20 left-12 w-7 h-7 bg-rose-200/80 rounded-full animate-flower-bloom" style={{clipPath: 'polygon(50% 0%, 80% 50%, 50% 100%, 20% 50%)', animationDelay: '3s'}}></div>
+          <div className="absolute bottom-36 left-24 w-5 h-5 bg-rose-300/70 rounded-full animate-flower-bloom" style={{clipPath: 'polygon(50% 0%, 80% 50%, 50% 100%, 20% 50%)', animationDelay: '3.3s'}}></div>
+          <div className="absolute bottom-52 left-16 w-9 h-9 bg-rose-100/90 rounded-full animate-flower-bloom" style={{clipPath: 'polygon(50% 0%, 80% 50%, 50% 100%, 20% 50%)', animationDelay: '3.6s'}}></div>
           
-          <div className="absolute top-1/4 left-6 text-white text-3xl animate-flower-bloom" style={{animationDelay: '4s'}}>🤍</div>
-          <div className="absolute top-1/3 left-16 text-white text-2xl animate-flower-bloom" style={{animationDelay: '4.3s'}}>🤍</div>
+          <div className="absolute top-1/4 left-8 w-6 h-6 bg-white/90 rounded-full animate-flower-bloom" style={{animationDelay: '4s'}}></div>
+          <div className="absolute top-1/3 left-20 w-4 h-4 bg-white/80 rounded-full animate-flower-bloom" style={{animationDelay: '4.3s'}}></div>
           
-          <div className="absolute bottom-12 right-6 text-purple-200 text-3xl animate-flower-bloom" style={{animationDelay: '2.5s'}}>🌺</div>
-          <div className="absolute bottom-28 right-18 text-purple-100 text-2xl animate-flower-bloom" style={{animationDelay: '2.8s'}}>🌺</div>
+          <div className="absolute bottom-16 right-8 w-6 h-6 bg-purple-200/80 rounded-full animate-flower-bloom" style={{clipPath: 'polygon(50% 0%, 80% 50%, 50% 100%, 20% 50%)', animationDelay: '2.5s'}}></div>
+          <div className="absolute bottom-32 right-20 w-5 h-5 bg-purple-100/70 rounded-full animate-flower-bloom" style={{clipPath: 'polygon(50% 0%, 80% 50%, 50% 100%, 20% 50%)', animationDelay: '2.8s'}}></div>
           
-          <div className="absolute top-2/3 right-1/5 text-yellow-200 text-3xl animate-flower-bloom" style={{animationDelay: '3.5s'}}>🌼</div>
-          <div className="absolute top-3/4 right-1/4 text-yellow-100 text-2xl animate-flower-bloom" style={{animationDelay: '3.8s'}}>🌼</div>
+          <div className="absolute top-2/3 right-1/5 w-7 h-7 bg-yellow-200/80 rounded-full animate-flower-bloom" style={{clipPath: 'polygon(50% 0%, 80% 50%, 50% 100%, 20% 50%)', animationDelay: '3.5s'}}></div>
+          <div className="absolute top-3/4 right-1/4 w-4 h-4 bg-yellow-100/70 rounded-full animate-flower-bloom" style={{clipPath: 'polygon(50% 0%, 80% 50%, 50% 100%, 20% 50%)', animationDelay: '3.8s'}}></div>
           
-          <div className="absolute bottom-1/4 left-1/4 text-red-200 text-3xl animate-flower-bloom" style={{animationDelay: '4.5s'}}>🌷</div>
-          <div className="absolute bottom-1/3 left-1/3 text-red-100 text-2xl animate-flower-bloom" style={{animationDelay: '4.8s'}}>🌷</div>
+          <div className="absolute bottom-1/4 left-1/4 w-6 h-6 bg-red-200/80 rounded-full animate-flower-bloom" style={{clipPath: 'polygon(50% 0%, 80% 50%, 50% 100%, 20% 50%)', animationDelay: '4.5s'}}></div>
+          <div className="absolute bottom-1/3 left-1/3 w-5 h-5 bg-red-100/70 rounded-full animate-flower-bloom" style={{clipPath: 'polygon(50% 0%, 80% 50%, 50% 100%, 20% 50%)', animationDelay: '4.8s'}}></div>
           
-          <div className="absolute top-1/2 left-1/5 text-pink-200 text-3xl animate-flower-bloom" style={{animationDelay: '5s'}}>🌺</div>
-          <div className="absolute top-3/5 right-1/6 text-orange-200 text-2xl animate-flower-bloom" style={{animationDelay: '5.3s'}}>🌻</div>
+          {/* Pearl Necklace Strings */}
+          <div className="absolute top-0 left-1/5 w-0.5 h-56 bg-gradient-to-b from-white/80 via-white/60 to-transparent animate-fade-in" style={{animationDelay: '3s'}}></div>
+          <div className="absolute top-0 left-1/3 w-0.5 h-48 bg-gradient-to-b from-white/70 via-white/50 to-transparent animate-fade-in" style={{animationDelay: '3.2s'}}></div>
+          <div className="absolute top-0 right-1/4 w-0.5 h-60 bg-gradient-to-b from-white/60 via-white/40 to-transparent animate-fade-in" style={{animationDelay: '3.5s'}}></div>
+          <div className="absolute top-0 right-1/6 w-0.5 h-52 bg-gradient-to-b from-white/75 via-white/55 to-transparent animate-fade-in" style={{animationDelay: '3.8s'}}></div>
           
-          {/* Pearl Strings and Chains */}
-          <div className="absolute top-0 left-1/6 w-px h-48 bg-gradient-to-b from-white/70 to-transparent animate-fade-in" style={{animationDelay: '3s'}}></div>
-          <div className="absolute top-0 left-1/4 w-px h-40 bg-gradient-to-b from-white/60 to-transparent animate-fade-in" style={{animationDelay: '3.2s'}}></div>
-          <div className="absolute top-0 right-1/3 w-px h-52 bg-gradient-to-b from-white/50 to-transparent animate-fade-in" style={{animationDelay: '3.5s'}}></div>
-          <div className="absolute top-0 right-1/5 w-px h-44 bg-gradient-to-b from-white/65 to-transparent animate-fade-in" style={{animationDelay: '3.8s'}}></div>
-          
-          {/* Flying Hearts */}
-          <div className="absolute top-10 left-1/2 text-rose text-2xl animate-bounce" style={{animationDelay: '1s'}}>💕</div>
-          <div className="absolute top-32 left-2/3 text-pink-400 text-xl animate-bounce" style={{animationDelay: '2s'}}>💖</div>
-          <div className="absolute bottom-24 left-1/4 text-rose text-lg animate-bounce" style={{animationDelay: '3s'}}>💗</div>
-          <div className="absolute bottom-40 right-1/3 text-pink-300 text-2xl animate-bounce" style={{animationDelay: '4s'}}>💞</div>
-          <div className="absolute top-1/2 right-10 text-rose text-xl animate-bounce" style={{animationDelay: '1.5s'}}>💝</div>
+          {/* Romantic Hearts */}
+          <div className="absolute top-12 left-1/2 text-rose-400 text-2xl animate-bounce" style={{animationDelay: '1s'}}>💕</div>
+          <div className="absolute top-36 left-2/3 text-pink-500 text-xl animate-bounce" style={{animationDelay: '2s'}}>💖</div>
+          <div className="absolute bottom-28 left-1/4 text-rose-400 text-lg animate-bounce" style={{animationDelay: '3s'}}>💗</div>
+          <div className="absolute bottom-44 right-1/3 text-pink-400 text-2xl animate-bounce" style={{animationDelay: '4s'}}>💞</div>
+          <div className="absolute top-1/2 right-12 text-rose-400 text-xl animate-bounce" style={{animationDelay: '1.5s'}}>💝</div>
         </div>
         
         {/* Main Content */}
@@ -129,7 +128,7 @@ const Index = () => {
               <h1 className="font-cormorant text-4xl md:text-5xl font-light text-foreground mb-4 animate-slide-in-left">
                 Это официально:
               </h1>
-              <h2 className="font-cormorant text-5xl md:text-6xl font-medium text-rose mb-6 animate-slide-in-right" style={{animationDelay: '0.5s'}}>
+              <h2 className="font-cormorant text-5xl md:text-6xl font-medium text-pink-600 mb-6 animate-slide-in-right" style={{animationDelay: '0.5s'}}>
                 мы женимся!
               </h2>
             </div>
